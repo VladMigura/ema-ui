@@ -18,3 +18,18 @@
     display: inline-block;
     margin-right: 10px;
 }
+
+.Danger {
+    background: red;
+    border-color: red;
+}
+
+.Edit {
+    background-color: orange;
+    border-color: orange;
+}
+
+.Save {
+    background-color: green;
+    border-color: green;
+}

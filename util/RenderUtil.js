@@ -1,5 +1,4 @@
 import { Button, Checkbox, Popover, Icon, Input } from 'antd'
-import JSONPretty from 'react-json-pretty'
 
 class RenderUtil {
 
@@ -17,29 +16,6 @@ class RenderUtil {
 
     static booleanRender(text, record, index) {
         return !text ? <Icon type='dash' /> : <Checkbox defaultChecked={text} disabled />
-    }
-
-    static jsonMessageRender(text, record, index) {
-        return !text ? <Icon type='dash' /> :
-            <Popover
-                content={<JSONPretty
-                    id='messageBody'
-                    data={text}
-                    mainStyle='line-height:1.3;color:#8a6c9a;background:#ffffff;overflow:auto;'
-                    keyStyle='color:#1036a3;'
-                    stringStyle='color:#72c040'
-                    valueStyle='color:#7b2425'
-                    booleanStyle='color:#9f9139'
-                />}
-                title='Message Body'>
-                <Button
-                    size='small'
-                    type='primary'
-                    shape='round'
-                    icon='message'
-                >
-                </Button>
-            </Popover>
     }
 
     static renderWithTextSearch = dataIndex => ({
